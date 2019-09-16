@@ -4,7 +4,7 @@ Welcome to the status wiki!
 
 下面简介一下如何使用以及目前支持的功能
 
-###新建状态：
+##新建状态
 ```javascript
 state.newState('a', {
             condition: 10,
