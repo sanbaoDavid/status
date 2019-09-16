@@ -4,7 +4,7 @@ Welcome to the status wiki!
 
 下面简介一下如何使用以及目前支持的功能
 
-在脚本引入后新建状态：
+###新建状态：
 ```javascript
 state.newState('a', {
             condition: 10,
@@ -26,3 +26,12 @@ state.newState('a', {
 * compareEnum:只有被监听变量是数字类型才会用到的比较类型
 * enfuncall:进入状态的回调
 * outfuncall:退出状态的回调
+
+###状态的删插查改
+* `splice` 需传递一个参数就是要删除的状态名称
+* `getState` 获取当前状态名称
+* `insert` 插入状态
+* `getStartState` 获取第一个状态名称
+* `getEndState` 获取最后一个状态名称
+* `logStateMap` 打印状态机的过程
+* `setState` 设置状态机状态，带有两个参数，第一个是设置状态名称，第二个是是否执行状态进入的回调函数
