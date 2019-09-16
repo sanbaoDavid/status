@@ -2,9 +2,9 @@ Welcome to the status wiki!
 
 # 这是一个个人demo，严禁用于任何带有盈利性质用途，仅供学习参考
 
-下面简介一下如何使用以及目前支持的功能
+###下面简介一下如何使用以及目前支持的功能
 
-##新建状态
+###新建状态
 ```javascript
 state.newState('a', {
             condition: 10,
