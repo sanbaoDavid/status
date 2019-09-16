@@ -35,3 +35,25 @@ state.newState('a', {
 * `getEndState` 获取最后一个状态名称
 * `logStateMap` 打印状态机的过程
 * `setState` 设置状态机状态，带有两个参数，第一个是设置状态名称，第二个是是否执行状态进入的回调函数
+
+###数字类型的比较枚举
+`compareEnum`可以直接写：`state.numEnum.GREATER`
+支持的比较类型：
+```javascript
+{
+        GREATER: '>',
+        GREATEREQUAL: '>=',
+        LESS: '<',
+        LESSEQUAL: '<=',
+        EQUAL: '=='
+    }
+```
+
+####啰嗦两句
+优点我也不知道有啥，缺点目前比较明显：
+* 被监听的变量只支持string，number，boolean
+* 目前只能监听对象里的变量，但是数组里不行
+  
+说一下目前比较省事的地方吧：
+* 被监听的变量，不管是在对象的原型里还是在对象里都可以找到，但只支持最外层的原型，再往里就不行了
+* 被监听的变量如果已经有过重写的getset，可以不被影响的被监听（不会覆盖之前的getset）
